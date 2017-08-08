@@ -1,0 +1,2 @@
+class DocumentedChangesController < ApplicationController
+end
