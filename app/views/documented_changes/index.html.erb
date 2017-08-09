@@ -18,8 +18,12 @@
         <tbody>
           <% @documented_changes.each do |change| %>
             <tr>
-              <td><%= change.summary %>
-              <td><%= change.text %>
+              <td>
+                <a href="<%= documented_change_path(change) %>">
+                  <%= change.summary %>
+                </a>
+              </td>
+              <td><%= change.text %></td>
             </tr>
           <% end %>
         </tbody>
