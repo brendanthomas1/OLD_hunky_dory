@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170808215132) do
+ActiveRecord::Schema.define(version: 20170809214052) do
 
   create_table "documented_changes", force: :cascade do |t|
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "summary", limit: 255
   end
 
 end

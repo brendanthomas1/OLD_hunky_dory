@@ -11,14 +11,14 @@
       <table class='table table-striped'>
         <thead>
           <tr>
-            <th>ID</th>
+            <th>Summary</th>
             <th>Text</th>
           </tr>
         </thead>
         <tbody>
           <% @documented_changes.each do |change| %>
             <tr>
-              <td><%= change.id %>
+              <td><%= change.summary %>
               <td><%= change.text %>
             </tr>
           <% end %>
