@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir['text/**/*']
 
   s.add_dependency 'rails', '~> 5.0'
+  s.add_dependency 'bootstrap-sass', '~> 3.3'
 
   s.add_development_dependency 'sqlite3'
 end

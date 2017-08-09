@@ -1,0 +1,29 @@
+<div class='container'>
+  <div class='row'>
+    <h1>Documented Changes</h1>
+    <div class='col-md-2'>
+      <button class='btn btn-primary' style='margin-top: 20%;'>
+        Add New Change
+      </button>
+    </div>
+
+    <div class='col-md-10'>
+      <table class='table table-striped'>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Text</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @documented_changes.each do |change| %>
+            <tr>
+              <td><%= change.id %>
+              <td><%= change.text %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
