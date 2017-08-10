@@ -3,17 +3,17 @@
     <div class='col-md-12'>
       <h3>New Change</h3>
 
-      <form>
+      <%= form_for @documented_change, url: {action: :create} do |f| %>
         <div class='form-group'>
-          <label for='summary'>Summary</label>
-          <textarea class='form-control'></textarea>
+          <%= label_tag :summary %>
+          <%= f.text_area :summary, class: 'form-control' %>
         </div>
         <div class='form-group'>
-          <label for='text'>Text</label>
-          <textarea class='form-control' rows='10'></textarea>
+          <%= label_tag :text %>
+          <%= f.text_area :text, class: 'form-control', rows: 10 %>
         </div>
         <button type='submit' class='btn btn-primary'>Submit</button>
-      </form>
+      <% end %>
 
     </div>
   </div>
