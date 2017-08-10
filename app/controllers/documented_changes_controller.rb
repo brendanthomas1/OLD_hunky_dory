@@ -7,6 +7,8 @@ class DocumentedChangesController < ApplicationController
 
   def show; end
 
+  def new; end
+
   private
 
   def set_documented_change
