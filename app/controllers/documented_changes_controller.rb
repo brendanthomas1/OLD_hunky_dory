@@ -1,5 +1,5 @@
 class DocumentedChangesController < ApplicationController
-  before_action :set_documented_change, only: :show
+  before_action :set_documented_change, only: %i[show destroy]
 
   def index
     @documented_changes = DocumentedChange.all
@@ -17,9 +17,15 @@ class DocumentedChangesController < ApplicationController
     if @documented_change.save
       redirect_to documented_change_path(@documented_change)
     else
-      # flash message
+      # TODO: add flash message
       render :new
     end
+  end
+
+  def destroy
+    # TODO: add flash message
+    @documented_change.destroy
+    redirect_to documented_changes_path
   end
 
   private
