@@ -1,8 +1,16 @@
 <div class='container'>
   <div class='row'>
-    <div class='col-md-12'>
-      <h3>New Change</h3>
+    <h3>New Change</h3>
+    <div class='col-md-2'>
+      <a href="<%= documented_changes_path %>"
+         class='btn btn-primary'
+         style='margin-top: 20%;'
+      >
+         Back
+      </a>
+    </div>
 
+    <div class='col-md-10'>
       <%= form_for @documented_change, url: {action: :create} do |f| %>
         <div class='form-group'>
           <%= label_tag :summary %>

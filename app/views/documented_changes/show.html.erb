@@ -1,9 +1,25 @@
-<h2>
-  <%= @documented_change.id %>
-</h2>
-<h5>
-  <%= @documented_change.summary %>
-</h5>
-<p>
-  <%= @documented_change.text %>
-</p>
+<div class='container'>
+  <div class='row'>
+    <h2>
+      <%= @documented_change.summary %>
+    </h2>
+
+    <div class='col-md-2'>
+      <a href="<%= documented_changes_path %>"
+         class='btn btn-primary'
+         style='margin-top: 20%;'
+      >
+         Back
+      </a>
+    </div>
+
+    <div class='col-md-10'>
+      <h5>
+        <%= @documented_change.id %>
+      </h5>
+      <p>
+        <%= @documented_change.text %>
+      </p>
+    </div>
+  </div>
+</div>
