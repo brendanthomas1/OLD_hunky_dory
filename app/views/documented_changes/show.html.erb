@@ -14,12 +14,17 @@
     </div>
 
     <div class='col-md-10'>
-      <h5>
-        <%= @documented_change.id %>
-      </h5>
-      <p>
-        <%= @documented_change.text %>
-      </p>
+      <%= form_for @documented_change, url: {action: :update} do |f| %>
+        <div class='form-group'>
+          <%= label_tag :summary %>
+          <%= f.text_area :summary, class: 'form-control' %>
+        </div>
+        <div class='form-group'>
+          <%= label_tag :text %>
+          <%= f.text_area :text, class: 'form-control', rows: 10 %>
+        </div>
+        <button type='submit' class='btn btn-primary'>Submit</button>
+      <% end %>
     </div>
   </div>
 </div>
