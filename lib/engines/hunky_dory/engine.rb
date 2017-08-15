@@ -1,3 +1,5 @@
+require 'bootstrap-sass'
+
 module HunkyDory
   class Engine < Rails::Engine
     initializer :append_migrations do |app|
